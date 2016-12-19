@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yolo Life Insurance</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <script type="text/javascript" src="scripts/modernizr.js" ></script>
+    <link rel="shortcut icon" href="Images/favicon.png" />
+</head>
+
+<body>
+    <script type="text/javascript">
+	// Some placeholder replacment scripting
+        function userclear() {
+            var user = document.getElementById("username").value
+            if (user == 'Username') {
+                document.getElementById('username').value = ''
+                document.getElementById('username').style.color = "#000"
+            }
+        }
+
+        function userfill() {
+            var user = document.getElementById("username").value
+            if (user == '') {
+                document.getElementById('username').value = 'Username'
+                document.getElementById('username').style.color = '#999'
+            }
+        }
+
+        function passclear() {
+            var pass = document.getElementById("password").value
+            if (pass == 'Password') {
+                document.getElementById('password').type = 'password'
+                document.getElementById('password').value = ''
+                document.getElementById('password').style.color = '#000'
+            }
+        }
+
+        function passfill() {
+            var pass = document.getElementById("password").value
+            if (pass == '') {
+                document.getElementById('password').type = 'text'
+                document.getElementById('password').value = 'Password'
+                document.getElementById('password').style.color = '#999'
+            }
+        }
+
+        function logindown() {
+            document.getElementById('login-register').style.backgroundColor = '#999'
+        }
+
+        function loginblur() {
+            document.getElementById('login-register').style.backgroundColor = "#FFF"
+        }
+
+        function contactCheck() {
+            var name = document.getElementById('name').value
+            var email = document.getElementById('email').value
+            var comment = document.getElementById('comment').value
+
+            if (name == "" || name == null || email == "" || email == null || comment == "" || comment == null) {
+                document.getElementById('form-fail').innerHTML = "* Please Enter in all information."
+                alert("Please Enter in all information.")
+                return false
+            }
+            document.getElementById('form-fail').innerHTML = ""
+            document.getElementById('form-pass').innerHTML = "Thank you for you submission."
+        }
+    </script>
+    <header>
+        <div id="gradient">
+            <a href="#container">
+                <div id="skipnav">Skip Navigation</div>
+            </a>
+            <div id="login">
+                <form>
+                    Login
+                    <input type="text" id="username" name="username" value="Username" onfocus="userclear()" onblur="userfill()" />
+                    <input type="text" id="password" name="password" value="Password" onfocus="passclear()" onblur="passfill()" />
+                    <input type="submit" id="login-register" value="Login" onMouseDown="logindown()" onMouseOut="loginblur()" />
+                </form>
+                <div id="container-logo">
+                    <div>
+                        <a id="logo" href="index.html">
+                            <img src="Images/Logo.png" alt="Yolo logo" />
+                        </a>
+                        <p>
+                            <a id="shopping-cart">
+                                <img src="Images/shopping_cart.png" style="float:left; margin-top:7px; margin-left:7px; padding-right:20px;" alt="shopping cart" />1 Item</a>
+                        </p>
+                        <br />
+                    </div>
+                    <div id="container-links">
+                        <a id="links-left" href="index.html">Index</a>
+                        <a class="links" href="packages.html">Plans/products</a>
+                        <a class="links" href="faq.html">FAQ</a>
+                        <a class="links" href="register.html">Register</a>
+                        <a id="links-right" href="contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <a href="#skipnav">
+        <div id="back-to-top">Back to top</div>
+    </a>
+    <div id="container">
+        <div style="display:inline;"></div>
+        <div class="container-p">Please feel free to contact us through email, phone or the form below</div>
+        <div id="contact-info">
+            <p class="bold">Contact Information:</p>
+            <br>
+            <br>Location: <a href="https://www.google.com/maps/place/Stanley+St/@-27.4865194,153.0355153,17z/data=!3m1!4b1!4m2!3m1!1s0x6b915a1481b07fad:0x64c8a93577ab35c0">Chirp St, Woolongabba, Brisbane, Qld</a>
+            <br>Phone: (07) 5555 5555
+            <br>Email: <a href="mailto:TheYoloLife@insurance.com">TheYoloLife@insurance.com</a>
+            <br>
+            <br>
+            <table id="open-hours">
+                <thead>
+                    <th colspan="2" style="text-align:center;">Business Hours</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>8am-5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>8am-5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>8am-5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>8am-5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>8am-5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>9am-3pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>10am-3pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="contact-form">Please fill in all information.
+            <form action="contact_submit.php" method="post">
+                Name:
+                <input type="text" name="name" id="name" placeholder="Name" value="" />
+                <br>Email:
+                <input type="email" name="email" id="email" placeholder="email" value="" />
+                <br>Comments:
+                <br>
+                <textarea placeholder="Comments" name="comment" id="comment"></textarea>
+                <br>
+                <br>
+                <input type="button" value="submit" style="float:right; width:60px; margin-right:23px;" onClick="contactCheck()" />
+            </form>
+            <div id="form-fail"></div>
+            <div id="form-pass"></div>
+        </div>
+    </div>
+    <footer>
+        <p>Created by Aaron Tumini, 2014</p>
+    </footer>
+</body>
+
+</html>

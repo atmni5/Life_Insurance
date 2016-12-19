@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yolo Life Insurance</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <script type="text/javascript" src="scripts/modernizr.js" ></script>
+    <link rel="shortcut icon" href="Images/favicon.png" />
+</head>
+
+<body>
+    <script type="text/javascript">
+        function userclear() {
+            var user = document.getElementById("username").value
+            if (user == 'Username') {
+                document.getElementById('username').value = ''
+                document.getElementById('username').style.color = "#000"
+            }
+        }
+
+        function userfill() {
+            var user = document.getElementById("username").value
+            if (user == '') {
+                document.getElementById('username').value = 'Username'
+                document.getElementById('username').style.color = '#999'
+            }
+        }
+
+        function passclear() {
+            var pass = document.getElementById("password").value
+            if (pass == 'Password') {
+                document.getElementById('password').type = 'password'
+                document.getElementById('password').value = ''
+                document.getElementById('password').style.color = '#000'
+            }
+        }
+
+        function passfill() {
+            var pass = document.getElementById("password").value
+            if (pass == '') {
+                document.getElementById('password').type = 'text'
+                document.getElementById('password').value = 'Password'
+                document.getElementById('password').style.color = '#999'
+            }
+        }
+
+        function logindown() {
+            document.getElementById('login-register').style.backgroundColor = '#999'
+        }
+
+        function loginblur() {
+            document.getElementById('login-register').style.backgroundColor = "#FFF"
+        }
+    </script>
+    <header>
+        <div id="gradient">
+            <a href="#container">
+                <div id="skipnav">Skip Navigation</div>
+            </a>
+            <div id="login">
+                <form>
+                    Login
+                    <input type="text" id="username" name="username" value="Username" onfocus="userclear()" onblur="userfill()" />
+                    <input type="text" id="password" name="password" value="Password" onfocus="passclear()" onblur="passfill()" />
+                    <input type="submit" id="login-register" value="Login" onMouseDown="logindown()" onMouseOut="loginblur()" />
+                </form>
+                <div id="container-logo">
+                    <div>
+                        <a id="logo" href="index.html">
+                            <img src="Images/Logo.png" alt="Yolo logo" />
+                        </a>
+                        <p>
+                            <a id="shopping-cart">
+                                <img src="Images/shopping_cart.png" style="float:left; margin-top:7px; margin-left:7px; padding-right:20px;" alt="shopping cart" />1 Item</a>
+                        </p>
+                        <br />
+                    </div>
+                    <div id="container-links">
+                        <a id="links-left" href="index.html">Index</a>
+                        <a class="links" href="packages.html">Plans/products</a>
+                        <a class="links" href="faq.html">FAQ</a>
+                        <a class="links" href="register.html">Register</a>
+                        <a id="links-right" href="contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <a href="#skipnav">
+        <div id="back-to-top">Back to top</div>
+    </a>
+    <div id="container">
+        <div style="display:inline;">
+            <div id="faq-body">
+                <h1 class="container-h1">F.A.Q.(Frequently Asked Questions)</h1>
+                <div class="clear"></div>
+                <div class="faq-p">
+                    <p class="bold">Who needs life insurance?</p>
+                    <br>
+                    <p>Everyone needs life insurance and working can increase the posibility of a fatal accident which can lead into debt being left to your family</p>
+                    <br>
+                    <br>
+                    <p class="bold">What is the right kind of life insurance?</p>
+                    <br>
+                    <p>The best insurance plan for you is dependent on you. To figure out which package will cover you the best, you will need to sit down and plan how much cover you would need.</p>
+                    <br>
+                    <br>
+                    <p class="bold">Tips on buying life insurance?</p>
+                    <br>
+                    <ul>
+                        <li>
+                            <p>Make sure you feel confident with the company providing the package plan to you.</p>
+                        </li>
+                        <li>
+                            <p>Decide how much you need, how long, and what you can afford to pay.</p>
+                        </li>
+                        <li>
+                            <p>Do not buy life insurance unless you intend to stick with your plan. It may be very costly if you quit during the early years of the policy.</p>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Created by Aaron Tumini, 2014</p>
+    </footer>
+</body>
+
+</html>

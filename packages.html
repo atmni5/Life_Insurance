@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Yolo Life Insurance</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <script type="text/javascript" src="scripts/modernizr.js" ></script>
+    <link rel="shortcut icon" href="Images/favicon.png" />
+</head>
+
+<body>
+    <script type="text/javascript">
+		function userclear()
+		{
+			var user = document.getElementById("username").value
+			if (user == 'Username')
+			{
+				document.getElementById('username').value = ''
+				document.getElementById('username').style.color = "#000"
+			}	
+		}
+		function userfill()
+		{
+			var user = document.getElementById("username").value
+			if (user == '')
+			{
+				document.getElementById('username').value = 'Username'
+				document.getElementById('username').style.color = '#999'
+			}	
+		}
+		function passclear()
+		{
+			var pass = document.getElementById("password").value
+			if (pass == 'Password')
+			{
+				document.getElementById('password').type = 'password'
+				document.getElementById('password').value = ''
+				document.getElementById('password').style.color = '#000'
+			}
+		}
+		function passfill()
+		{
+			var pass = document.getElementById("password").value
+			if (pass == '')
+			{
+				document.getElementById('password').type = 'text'
+				document.getElementById('password').value = 'Password'
+				document.getElementById('password').style.color = '#999'
+			}
+		}
+		function logindown()
+		{
+			document.getElementById('login-register').style.backgroundColor = '#999'
+		}
+		function loginblur()
+		{
+			document.getElementById('login-register').style.backgroundColor = "#FFF"
+		}
+    </script>
+    <header>
+        <div id="gradient">
+            <a href="#container">
+                <div id="skipnav">Skip Navigation</div>
+            </a>
+            <div id="login">
+                <form>
+                    Login
+                    <input type="text" id="username" name="username" value="Username" onfocus="userclear()" onblur="userfill()" />
+                    <input type="text" id="password" name="password" value="Password" onfocus="passclear()" onblur="passfill()" />
+                    <input type="submit" id="login-register" value="Login" onMouseDown="logindown()" onMouseOut="loginblur()" />
+                </form>
+                <div id="container-logo">
+                    <div>
+                        <a id="logo" href="index.html">
+                            <img src="Images/Logo.png" alt="Yolo logo" />
+                        </a>
+                        <p>
+                            <a id="shopping-cart">
+                                <img src="Images/shopping_cart.png" style="float:left; margin-top:7px; margin-left:7px; padding-right:20px;" alt="shopping cart" />1 Item</a>
+                        </p>
+                        <br />
+                    </div>
+                    <div id="container-links">
+                        <a id="links-left" href="index.html">Index</a>
+                        <a class="links" href="packages.html">Plans/products</a>
+                        <a class="links" href="faq.html">FAQ</a>
+                        <a class="links" href="register.html">Register</a>
+                        <a id="links-right" href="contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <a href="#skipnav">
+        <div id="back-to-top">Back to top</div>
+    </a>
+    <div id="container">
+        <div style="display:inline;"></div>
+        <div class="container-p">Please look through our package range that we have listed below. If you want to purchase a package online please click the Purchase button that is located in the box containing the package. Once you have proceeded with your choice will be sent to your shopping cart where you review the packages that you are have chosen to purchase. If you are skeptical of purchasing products through our online system please contact us by phone during our business hours which can be located on our contact page.</div>
+        <div class="package">
+            <div class="package-info">
+                <p class="package-heading">Base Plan</p>
+                <p class="package-desc">This is the base insurance plan which covers you for the most common insurance claims for a smaller price then other plans</p>
+            </div>
+            <div class="package-price">
+                <p class="package-heading">This package costs:</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="price">
+                    <p class="bold">$2.10</p>
+                    <p>p/Week</p>
+                </div>
+                <div class="package-purchase">
+                    <form>
+                        <input type="hidden" name="base-package" id="base-package" />
+                        <input type="submit" value="Purchase" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="package">
+            <div class="package-info">
+                <p class="package-heading">Universal Plan</p>
+                <p class="package-desc">This premium plan covers all accidents resulting in death.</p>
+            </div>
+            <div class="package-price">
+                <p class="package-heading">This package costs:</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="price">
+                    <p class="bold">$16.00</p>
+                    <p>p/Week</p>
+                </div>
+                <div class="package-purchase">
+                    <form>
+                        <input type="hidden" name="universal-package" id="universal-package" />
+                        <input type="submit" value="Purchase" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="package">
+            <div class="package-info">
+                <p class="package-heading">level Term Plan</p>
+                <p class="package-desc">This plan provides affordable protection for a specific number of years at a set price</p>
+            </div>
+            <div class="package-price">
+                <p class="package-heading">This package costs:</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="price">
+                    <p class="bold">$7.75</p>
+                    <p>p/Week</p>
+                </div>
+                <div class="package-purchase">
+                    <form>
+                        <input type="hidden" name="level-plan" id="level-plan" />
+                        <input type="submit" value="Purchase" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <footer>
+        <p>Created by Aaron Tumini, 2014</p>
+    </footer>
+</body>
+</html>

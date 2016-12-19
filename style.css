@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body
+{
+	padding: 0;
+	margin: 0;
+}
+h1
+{
+	display: inline;
+}
+p
+{
+	display: inline;
+	font-size: 18px;
+}
+#gradient
+{
+	margin: auto;
+	width: 100%;
+	height: 250px;
+	background-image: url(Images/gradient.jpg);
+	background-color: #000;
+}
+#login
+{
+	width: 960px;
+	height: 25px;
+	color: #FFF;
+	text-align: right;
+	margin: auto;
+	padding-top: 10px;
+}
+#push
+{
+	width: 1px;
+	height: 75px;
+}
+.package
+{
+	width: 770px;
+	height: 150px;
+	margin: 20px auto 0 auto;
+	border: #000 solid 3px;
+	border-radius: 10px;
+	padding: 5px;
+}
+.package-info
+{
+	width: 562px;
+	padding-right: 10px;
+	border-right: solid 3px #000;
+	height: 150px;
+	float: left;
+}
+.package-heading
+{
+	font-weight: 700;
+	font-size: 18px;
+	width: 552px;
+}
+.package-desc
+{
+	width: 552px;
+	display: compact;
+}
+.package-price
+{
+	float: left;
+	width: 190px;
+	height: 150px;
+	display: block;
+	margin-left: 5px;
+}
+.price
+{
+	bottom: 0;
+	position: relative;
+	right: 0;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+.package-purchase
+{
+	float: right;
+	margin-top: 10px;
+}
+.bold
+{
+	font-weight: bold;
+}
+#container-logo
+{
+	width: 960px;
+	height: 250px;
+	margin: auto;
+	display: inline;
+}
+.container-h1
+{
+	float: left;
+	min-width: 200px;
+	padding: 0;
+	height: 60px;
+	margin-top: 10px;
+}
+#index-body
+{
+	float: left;
+	width: 380px;
+	margin: 0 10px 10px 10px;
+}
+#faq-body
+{
+	float: left;
+	width: 680px;
+	margin: 0 10px 10px 10px;
+}
+#faq-body h1
+{
+	margin-bottom: 0;
+}
+#video-box-index
+{
+	width: 540px;
+	margin: 10px;
+	min-height: 200px;
+	float: left;
+}
+#video-box-index figure
+{
+	position: relative;
+	left: 30px;
+}
+#video-box-index p
+{
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+}
+.clear
+{
+	clear: both;
+	margin: 0;
+	padding: 0;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+.index-p
+{
+	float: left;
+	width: 380px;
+	text-align: justify;
+	margin: 0;
+}
+.faq-p
+{
+	width: 680px;
+	text-align: justify;
+	margin: 0;
+}
+.container-p
+{
+	padding: 10px;
+	width: 940px;
+	text-align: justify;
+}
+#skipnav
+{
+	float: right;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom: ridge 3px #FFF;
+	border-left: ridge 3px #FFF;
+	border-right: ridge 3px #FFF;
+	padding: 0 5px 2px 5px;
+	background: #FFF;
+	margin-right: 10px;
+	width: 130px;
+	font-weight: 600;
+	text-align: center;
+	color: #000;
+	text-decoration: underline;
+}
+#index-upcoming
+{
+	margin: 50px 0 0 0;
+}
+#upcoming th
+{
+	height: 20px;
+	font-size: 20px;
+	text-indent: -150px;
+}
+#upcoming tr
+{
+	height: 25px;
+}
+#contact-info
+{
+	width: 457px;
+	margin: 10px;
+	height: 300px;
+	text-align: left;
+	font-size: 16px;
+	float: left;
+	border-right: 3px #000 solid;
+}
+#contact-form
+{
+	width: 457px;
+	position: relative;
+	top: 0;
+	margin: 10px;
+	float: right;
+}
+#login-register
+{
+	border-radius: 10px;
+	height: 20px;
+	background-color: #FFF;
+	border: none;
+}
+#logo
+{
+	height: 150px;
+	width: 250px;
+	display: inline;
+	float: left;
+}
+#shopping-cart
+{
+	width: 200px;
+	height: 50px;
+	float: right;
+	display: inline;
+	text-decoration: none;
+	margin-top: 80px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border: #FFF solid 2px;
+	font-size: 40px;
+	color: #FFF;
+}
+#container-links
+{
+	height: 25px;
+	min-width: 100px;
+	float: right;
+	border: #fff ridge 2px;
+	margin-top: 30px;
+	border-radius: 10px;
+	background-color: #FFF;
+}
+.links
+{
+	width: 120px;
+	height: 20px;
+	vertical-align: sub;
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	float: left;
+	border-left: #000 1px solid;
+	border-right: #000 1px solid;
+}
+#links-left
+{
+	width: 120px;
+	height: 20px;
+	vertical-align: sub;
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	float: left;
+	border-right: #000 1px solid;
+}
+#links-right
+{
+	width: 120px;
+	height: 20px;
+	vertical-align: sub;
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	float: left;
+	border-left: #000 1px solid;
+}
+#container
+{
+	width: 960px;
+	min-height: 500px;
+	margin: auto;
+	background-color: #FFF;
+	border-right: solid 3px #000;
+	border-left: solid 3px #000;
+	border-bottom: solid 3px #000;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 3px 3px 10px #000;
+}
+footer
+{
+	border: #000 solid 3px;
+	border-radius: 10px;
+	width: 960px;
+	height: 30px;
+	margin: 10px auto 10px auto;
+	box-shadow: 3px 3px 10px #000;
+}
+footer p
+{
+	text-align: right;
+	display: block;
+	font-size: 12px;
+	margin: 3px;
+	line-height: 43px;
+}
+#username, #password
+{
+	color: #888;
+}
+#back-to-top
+{
+	position: fixed;
+	bottom: 0px;
+	right: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top: groove 3px #999;
+	border-left: groove 3px #CCC;
+	border-right: groove 3px #FFF;
+	padding: 0 5px 0px 5px;
+	background: #FFF;
+	width: 130px;
+	text-align: center;
+	font-weight: 600;
+	background-image: url(Images/gradient.jpg);
+	color: #FFF;
+	text-decoration: underline;
+}
+#contact-form textarea
+{
+	resize: none;
+	margin-left: 50px;
+	width: 380px;
+	height: 150px;
+	display: inline;
+}
+#register
+{
+	margin: auto;
+	width: 600px;
+	min-height: 250px;
+}
+#register-form input
+{
+	float: right;
+	display: inline;
+	margin: 0;
+	border: 2px inset #999;
+	background-color: #FFF;
+}
+.register-info
+{
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+#form-fail
+{
+	color: #F00;
+}
+#open-hours td
+{
+	width: 150px;
+}
+#open-hours th
+{
+	text-indent: -90px
+}
+#contact-form input, #contact-form email
+{
+	width: 150px;
+}
+#contact-info a:link
+{
+	color: #0000EE;
+}
+#contact-info a:visited
+{
+	color: #0000EE;
+}
+#contact-info a:hover
+{
+	color: #0000EE;
+}
+#contact-info a:active
+{
+	color: #0000EE;
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yolo Life Insurance</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+    <link rel="shortcut icon" href="Images/favicon.png" />
+	<script type="text/javascript" src="scripts/modernizr.js" ></script>
+</head>
+
+<body>
+	
+    <script type="text/javascript">
+        function userclear() {
+            var user = document.getElementById("username").value
+            if (user == 'Username') {
+                document.getElementById('username').value = ''
+                document.getElementById('username').style.color = "#000"
+            }
+        }
+
+        function userfill() {
+            var user = document.getElementById("username").value
+            if (user == '') {
+                document.getElementById('username').value = 'Username'
+                document.getElementById('username').style.color = '#999'
+            }
+        }
+
+        function passclear() {
+            var pass = document.getElementById("password").value
+            if (pass == 'Password') {
+                document.getElementById('password').type = 'password'
+                document.getElementById('password').value = ''
+                document.getElementById('password').style.color = '#000'
+            }
+        }
+
+        function passfill() {
+            var pass = document.getElementById("password").value
+            if (pass == '') {
+                document.getElementById('password').type = 'text'
+                document.getElementById('password').value = 'Password'
+                document.getElementById('password').style.color = '#999'
+            }
+        }
+
+        function logindown() {
+            document.getElementById('login-register').style.backgroundColor = '#999'
+        }
+
+        function loginblur() {
+            document.getElementById('login-register').style.backgroundColor = "#FFF"
+        }
+
+        function register_check() {
+            var fname = document.getElementById('fname').value
+            var lname = document.getElementById('lname').value
+            var email = document.getElementById('email').value
+            var phone = document.getElementById('phone').value
+            document.getElementById('fname').style.border = "2px solid #999"
+            document.getElementById('lname').style.border = "2px solid #999"
+            document.getElementById('email').style.border = "2px solid #999"
+            document.getElementById('phone').style.border = "2px solid #999"
+            var fail = ""
+            if (fname == "" || fname == null) {
+                document.getElementById('fname').style.border = "#F00 2px solid"
+                fail = "fail"
+            }
+            if (lname == "" || lname == null) {
+                document.getElementById('lname').style.border = "#F00 2px solid"
+                fail = "fail"
+            }
+            if (email == "" || email == null) {
+                document.getElementById('email').style.border = "#F00 2px solid"
+                fail = "fail"
+            }
+            if (phone == "" || phone == null) {
+                document.getElementById('phone').style.border = "#F00 2px solid"
+                fail = "fail"
+            }
+            if (fail == "fail") {
+                alert("Please fill in all forms")
+                return false
+            }
+            document.getElementById('regester-succeed').innerHTML = "Thank you for submitting you details. An account will be made shortly."
+        }
+    </script>
+    <header>
+        <div id="gradient">
+            <a href="#container">
+                <div id="skipnav">Skip Navigation</div>
+            </a>
+            <div id="login">
+                <form>
+                    Login
+                    <input type="text" id="username" name="username" value="Username" onfocus="userclear()" onblur="userfill()" />
+                    <input type="text" id="password" name="password" value="Password" onfocus="passclear()" onblur="passfill()" />
+                    <input type="submit" id="login-register" value="Login" onMouseDown="logindown()" onMouseOut="loginblur()" />
+                </form>
+                <div id="container-logo">
+                    <div>
+                        <a id="logo" href="index.html">
+                            <img src="Images/Logo.png" alt="Yolo logo" />
+                        </a>
+                        <p>
+                            <a id="shopping-cart">
+                                <img src="Images/shopping_cart.png" style="float:left; margin-top:7px; margin-left:7px; padding-right:20px;" alt="shopping cart" />1 Item</a>
+                        </p>
+                        <br />
+                    </div>
+                    <div id="container-links">
+                        <a id="links-left" href="index.html">Index</a>
+                        <a class="links" href="packages.html">Plans/products</a>
+                        <a class="links" href="faq.html">FAQ</a>
+                        <a class="links" href="register.html">Register</a>
+                        <a id="links-right" href="contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <a href="#skipnav">
+        <div id="back-to-top">Back to top</div>
+    </a>
+    <div id="container">
+        <div style="display:inline; padding:10px;"></div>
+        <p class="container-p">Please Register for an account to a website so you can purchase packages.</p>
+        <br>
+        <br>
+        <br>
+        <div id="register">
+            <fieldset>
+                <legend>Register</legend>
+                <form id="register-form" action="register.php" method="post">
+                    <p>First Name:</p>
+                    <input type="text" name="fname" id="fname" placeholder="First name" />
+                    <br>
+                    <p class="register-info">Please enter your first name</p>
+                    <br>
+                    <br>
+                    <p>Last Name:</p>
+                    <input type="text" name="lname" id="lname" placeholder="Last name" />
+                    <br>
+                    <p class="register-info">Please enter your last name</p>
+                    <br>
+                    <br>
+                    <p>Email:</p>
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <br>
+                    <p class="register-info">Please enter your email</p>
+                    <br>
+                    <br>
+                    <p>Phone:</p>
+                    <input type="text" name="phone" id="phone" placeholder="phone" />
+                    <br>
+                    <p class="register-info">Please enter your contact number</p>
+                    <br>
+                    <input type="button" value="Submit" onClick="register_check()" style="border-radius:10px;" />
+                </form>
+            </fieldset>
+        </div>
+        <div style="text-align:center; margin-top:20px;" id="regester-succeed"></div>
+    </div>
+    <footer>
+        <p>Created by Aaron Tumini, 2014</p>
+    </footer>
+</body>
+
+</html>
